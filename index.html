@@ -22,7 +22,7 @@
   <a href="#github" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-github w3-xxlarge"></i><p>GITHUB</p>
   </a>
-  <a href="#familytree" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="#db" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="glyphicon glyphicon-tree-deciduous w3-xxlarge"></i><p>DATABASE</p>
   </a>
   <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
@@ -39,7 +39,7 @@
     <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
     <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
     <a href="#github" class="w3-bar-item w3-button" style="width:25% !important">GITHUB</a>
-    <a href="#familytree" class="w3-bar-item w3-button" style="width:25% !important">DATABASE</a>
+    <a href="#db" class="w3-bar-item w3-button" style="width:25% !important">DATABASE</a>
     <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
     <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
   </div>
@@ -163,11 +163,11 @@
 
 
   <!-- Database Section -->
-  <div class="w3-padding-64 w3-content" id="familytree">
+  <div class="w3-padding-64 w3-content" id="db">
     <h2>Database</h2>
     <hr style="width:200px" class="w3-opacity">
 
-    <div class="w3-padding w3-content" id="familytree">
+    <div class="w3-padding w3-content" id="dbinstruction">
       <p>A database that contains a family tree that starts with Dan</p>
       <h3>Instructions</h3>
       <p>Search with empty string to fetch whole database and see available fields.</p>
@@ -181,15 +181,17 @@
       </i></ul>
     </div>
 
-    <form action="/php/search.php" method="get" target="_blank">
-      <p><input class="w3-input w3-padding-16 w3-text-dark-grey" type="text" placeholder="Search String" name="search"></p>
-      <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-search"></i> SEARCH
-        </button>
-      </p>
-    </form>
-    <p class="w3-text-grey">Powered by MySQL and PHP (PDO)</p>
+    <div class="w3-padding w3-content" id="dbsearch">
+      <form action="/php/search.php" method="get" target="_blank">
+        <p><input class="w3-input w3-padding-16 w3-text-dark-grey" type="text" placeholder="Search String" name="search"></p>
+        <p>
+          <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+            <i class="fa fa-search"></i> SEARCH
+          </button>
+        </p>
+      </form>
+      <p class="w3-text-grey">Powered by MySQL and PHP (PDO)</p>
+    </div>
 
 
   <!-- End Database Section -->
