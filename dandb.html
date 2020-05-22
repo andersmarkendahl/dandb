@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 
 <body class="w3-black w3-text-light-grey">
@@ -13,41 +14,83 @@
 <div class="" id="dbmain">
 
   <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="dbhome">
-    <h1 class="w3-xxlarge w3-wide">Dan Data Base</h1>
+  <header class="w3-container w3-padding-large w3-center w3-black" id="dbhome">
+    <h1 class="w3-xxlarge w3-wide">DanDB</h1>
+    <p>A database that starts with Dan</p>
   </header>
 
   <!-- Database Section -->
-  <div class="w3-padding w3-content" id="dbinstruction">
-    <p>A database that contains a family tree that starts with Dan</p>
-    <h3>Instructions</h3>
-    <p>Search with empty string to fetch whole database and see available fields.</p>
-    <p>Text strings must be enclosed with apostrophes ('').</p>
-    <p>Operands AND, OR and NOT are supported.</>
-    <h3>Examples:</h3>
-    <ul><i>
-      <li>firstName='Anders'</li>
-      <li>firstName='Marika' OR middleName='Jan'</li>
-      <li>firstName='Jan' OR (lastName='Markendahl' AND gender='M')</li>
-    </i></ul>
-  </div>
+  <div class="w3-row-padding" style="margin:0 -16px">
 
-  <div class="w3-content" id="dbsearch">
-    <form action="/php/search.php" method="get" target="_blank">
-      <p><input class="w3-input w3-padding-16 w3-text-dark-grey" type="text" placeholder="Search String" name="search"></p>
-      <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-search"></i> SEARCH
-        </button>
-      </p>
-    </form>
-    <p class="w3-text-grey">Powered by MySQL and PHP (PDO)</p>
+    <div class="w3-half w3-padding-large">
+      <div class="w3-padding w3-border" id="dbinstruction">
+        <h3>Instructions for queries</h3>
+        <p>Search with empty string to fetch whole database.</p>
+        <p>Text must be enclosed with apostrophes ('').</p>
+        <p>Operands AND, OR and NOT are supported.</>
+        <h3>Examples:</h3>
+        <ul><i>
+          <li>firstName='Anders'</li>
+          <li>firstName='Marika' OR middleName='Jan'</li>
+          <li>firstName='Jan' OR (lastName='Markendahl' AND gender='M')</li>
+        </i></ul>
+      </div>
+
+      <div class="" id="dbremove">
+        <form action="/php/remove.php" method="post">
+          <p><input class="w3-input w3-padding-16 w3-text-dark-grey" type="text" placeholder="Removal String" name="remove"></p>
+          <p>
+            <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+              <i class="material-icons">remove_circle_outline</i> REMOVE
+            </button>
+          </p>
+        </form>
+      </div>
+
+      <div class="" id="dbsearch">
+        <form action="/php/search.php" method="get" target="_blank">
+          <p><input class="w3-input w3-padding-16 w3-text-dark-grey" type="text" placeholder="Search String" name="search"></p>
+          <p>
+            <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+              <i class="material-icons">search</i> SEARCH
+            </button>
+          </p>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="w3-half w3-padding-large">
+      <div class="" id="dbadd">
+        <form action="/php/add.php" method="post">
+          <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="firstName" name="fname"></p>
+          <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="middleName" name="mname"></p>
+          <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="lastName" name="lname"></p>
+          <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="dateOfBirth" name="dob"></p>
+          <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="dateOfDeath" name="dod"></p>
+          <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="placeOfBirth" name="pob"></p>
+          <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="gender" name="gender"></p>
+          <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="profession" name="profession"></p>
+          <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="misc" name="misc"></p>
+          <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="fatherId" name="fid"></p>
+          <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="motherId" name="fid"></p>
+          <p>
+            <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+              <i class="material-icons">person_add</i> ADD
+            </button>
+          </p>
+        </form>
+      </div>
+    </div>
+
   </div>
   <!-- End Database Section -->
 
   <!-- Footer -->
-  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-    <p class="w3-medium">Credit where credit is due, powered by
+  <footer class="w3-padding-64 w3-text-grey w3-center">
+    <p class="w3-medium">Credit where credit is due, powered by 
+      <a href="https://www.mysql.com" target="_blank" class="w3-hover-text-white extlink">MySQL</a>, 
+      <a href="https://www.php.net" target="_blank" class="w3-hover-text-white extlink">PHP</a> and 
       <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-white extlink">w3.css</a>
     </p>
   <!-- End footer -->
