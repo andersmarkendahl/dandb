@@ -12,8 +12,11 @@ echo "<tr class=\"w3-light-grey\">
 <th>middleName</th>
 <th>lastName</th>
 <th>dateOfBirth</th>
+<th>dateOfDeath</th>
 <th>placeOfBirth</th>
 <th>gender</th>
+<th>profession</th>
+<th>misc</th>
 <th>fatherId</th>
 <th>motherId</th>
 <th>created</th>
@@ -49,6 +52,8 @@ try {
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   $search = $_GET["search"];
+
+  echo "<h1 class=\"w3-padding-large\">Search Results: $search</h1>";
 
   if (empty($search)) {
     $stmt = $conn->prepare("SELECT * FROM person");
