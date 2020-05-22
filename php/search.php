@@ -4,6 +4,7 @@ echo "<html>";
 echo "<link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">";
 echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/styles.css\">";
 echo "<body class=\"w3-black w3-text-light-grey\">";
+echo "<div class=\"w3-padding-large\">";
 echo "<table class=\"w3-table w3-border w3-bordered w3-text-light-grey\";'>";
 echo "<tr class=\"w3-light-grey\">
 <th>id</th>
@@ -68,6 +69,7 @@ try {
   echo "\n";
 }
 $conn = null;
+echo "</div>";
 echo "</table>";
 echo "</body>";
 echo "</html>";
