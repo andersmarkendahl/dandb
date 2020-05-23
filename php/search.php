@@ -4,8 +4,7 @@ echo "<html>";
 echo "<link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">";
 echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/styles.css\">";
 echo "<body class=\"w3-black w3-text-light-grey\">";
-echo "<div class=\"w3-padding-large\">";
-echo "<table class=\"w3-table w3-border w3-bordered w3-text-light-grey\";'>";
+echo "<table class=\"w3-table w3-border w3-bordered\";'>";
 echo "<tr class=\"w3-light-grey\">
 <th>id</th>
 <th>firstName</th>
@@ -52,8 +51,7 @@ try {
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   $search = $_GET["search"];
-
-  echo "<h1 class=\"w3-padding-large\">Search Results: $search</h1>";
+  echo "<h2>Search Results: $search</h2>";
 
   if (empty($search)) {
     $stmt = $conn->prepare("SELECT * FROM person");
@@ -74,7 +72,6 @@ try {
   echo "\n";
 }
 $conn = null;
-echo "</div>";
 echo "</table>";
 echo "</body>";
 echo "</html>";
