@@ -23,7 +23,7 @@
   <div class="w3-row-padding" style="margin:0 -16px">
 
     <div class="w3-half w3-padding-large">
-      <div class="w3-padding w3-border" id="dbinstruction">
+      <div class="w3-block w3-padding w3-border w3-round-large" id="dbinstruction">
         <h2>Instructions</h2>
         <p>Search with empty string to fetch whole database.</p>
         <p>Text must be enclosed with apostrophes ('').</p>
@@ -40,7 +40,7 @@
         <h2>Remove Person</h2>
         <form action="/php/remove-person.php" method="post" target="removenote">
           <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="Username" name="username" required></p>
-          <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="password" placeholder="Password" name="password" required></p>
+          <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="password" placeholder="Password" name="password" required></p><br>
           <p><input class="w3-input w3-padding-16 w3-text-dark-grey" type="text" placeholder="Removal String" name="remove" required></p>
           <div class=w3-col">
             <button class="w3-left w3-button w3-light-grey w3-padding-large" type="submit">
@@ -69,6 +69,8 @@
       <div class="w3-block" id="dbadd">
         <h2>Add Person</h2>
         <form action="/php/add.php" method="post">
+          <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="Username" name="username" required></p>
+          <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="password" placeholder="Password" name="password" required></p><br>
           <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="firstName" name="fname"></p>
           <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="middleName" name="mname"></p>
           <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="lastName" name="lname"></p>
