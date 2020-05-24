@@ -36,21 +36,22 @@
         </i></ul>
       </div>
 
-      <div class="" id="dbremove">
+      <div class="w3-block" id="dbremove">
         <h2>Remove Person</h2>
-        <form action="/php/remove-person.php" method="post">
+        <form action="/php/remove-person.php" method="post" target="removenote">
           <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="Username" name="username" required></p>
           <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="password" placeholder="Password" name="password" required></p>
           <p><input class="w3-input w3-padding-16 w3-text-dark-grey" type="text" placeholder="Removal String" name="remove" required></p>
-          <p>
-            <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <div class=w3-col">
+            <button class="w3-left w3-button w3-light-grey w3-padding-large" type="submit">
               <i class="material-icons">remove_circle_outline</i> REMOVE
             </button>
-          </p>
+            <iframe title="Remove Notification" style="height: 54px;" class="w3-rest w3-padding-small" frameborder="0" id="removeid" name="removenote"></iframe>
+          </div>
         </form>
       </div>
 
-      <div class="" id="dbsearch">
+      <div class="w3-block" id="dbsearch">
         <h2>Search Persons</h2>
         <form action="/php/search.php" method="get" target="searchresults">
           <p><input class="w3-input w3-padding-16 w3-text-dark-grey" type="text" placeholder="Search String" name="search"></p>
@@ -65,7 +66,7 @@
     </div>
 
     <div class="w3-half w3-padding-large">
-      <div class="" id="dbadd">
+      <div class="w3-block" id="dbadd">
         <h2>Add Person</h2>
         <form action="/php/add.php" method="post">
           <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="firstName" name="fname"></p>
