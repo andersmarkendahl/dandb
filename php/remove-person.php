@@ -13,10 +13,9 @@ try {
   $sql = "DELETE FROM person WHERE $remove";
 
   $conn->exec($sql);
-  echo "Person deleted successfully\n";
+  echo "<p>Person deleted successfully</p>";
 
 } catch(PDOException $e) {
-  echo "Deletion of person failed:\n" . $e->getMessage();
-  echo "\n";
+  echo "<p>Deletion of person failed:\n" . $e->getMessage() . "</p>";
 }
 ?>
