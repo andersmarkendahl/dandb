@@ -11,7 +11,7 @@ try {
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   $stmt = $conn->prepare("DELETE FROM person WHERE $remove");
-  $stmt->execute();
+  $rows = $stmt->execute();
   echo "<p style=\"color:white;\">PASSED: $rows person(s) deleted</p>";
 
 } catch(PDOException $e) {
