@@ -39,7 +39,9 @@
       <div class="" id="dbremove">
         <h2>Remove Person</h2>
         <form action="/php/remove.php" method="post">
-          <p><input class="w3-input w3-padding-16 w3-text-dark-grey" type="text" placeholder="Removal String" name="remove"></p>
+          <p><input class="w3-input w3-padding-16 w3-text-dark-grey" type="text" placeholder="Username" name="username" required></p>
+          <p><input class="w3-input w3-padding-16 w3-text-dark-grey" type="text" placeholder="Password" name="password" required></p>
+          <p><input class="w3-input w3-padding-16 w3-text-dark-grey" type="text" placeholder="Removal String" name="remove" required></p>
           <p>
             <button class="w3-button w3-light-grey w3-padding-large" type="submit">
               <i class="material-icons">remove_circle_outline</i> REMOVE
@@ -72,7 +74,7 @@
           <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="dateOfBirth (format YYYY-MM-DD)" name="dob"></p>
           <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="dateOfDeath (format YYYY-MM-DD)" name="dod"></p>
           <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="placeOfBirth" name="pob"></p>
-          <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="gender (M or F)" name="gender"></p>
+          <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="gender (M or F)" name="gender" required></p>
           <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="profession" name="profession"></p>
           <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="misc (max 255 characters)" name="misc"></p>
           <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="fatherId" name="fid"></p>
