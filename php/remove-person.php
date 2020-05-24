@@ -10,7 +10,8 @@ try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-  $sql = "DELETE FROM person WHERE $remove";
+  $stmt = $conn->prepare("DELETE FROM person WHERE $remove");
+  $stmt->execute();
 
   $rows = $conn->exec($sql);
   echo "<p style=\"color:white;\">PASSED: $rows person(s) deleted</p>";
