@@ -3,9 +3,9 @@ $servername = "localhost";
 $dbname = "danDB";
 
 try {
-  $username = $_GET["username"];
-  $password = $_GET["password"];
-  $remove = $_GET["remove"];
+  $username = $_POST["username"];
+  $password = $_POST["password"];
+  $remove = $_POST["remove"];
 
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
