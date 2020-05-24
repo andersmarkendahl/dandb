@@ -68,7 +68,7 @@
     <div class="w3-half w3-padding-large">
       <div class="w3-block" id="dbadd">
         <h2>Add Person</h2>
-        <form action="/php/add.php" method="post">
+        <form action="/php/add-person.php" method="post" target="addnote">
           <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="Username" name="username" required></p>
           <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="password" placeholder="Password" name="password" required></p><br>
           <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="firstName" name="fname"></p>
@@ -82,11 +82,12 @@
           <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="misc (max 255 characters)" name="misc"></p>
           <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="fatherId" name="fid"></p>
           <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="motherId" name="mid"></p>
-          <p>
-            <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <div class=w3-col">
+            <button class="w3-left w3-button w3-light-grey w3-padding-large" type="submit">
               <i class="material-icons">person_add</i> ADD
             </button>
-          </p>
+            <iframe title="Add Notification" style="height: 54px;" class="w3-rest w3-padding-small w3-border-0" id="addid" name="addnote"></iframe>
+          </div>
         </form>
       </div>
     </div>
