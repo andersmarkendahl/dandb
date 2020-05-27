@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -58,6 +59,18 @@
           <p>
             <button class="w3-button w3-light-grey w3-padding-large" type="submit">
               <i class="material-icons">search</i> SEARCH
+            </button>
+          </p>
+        </form>
+      </div>
+
+      <div class="w3-block" id="dbtree">
+        <h2>Generate Tree</h2>
+        <form action="/php/tree.php" method="get" target="_blank">
+          <p><input class="w3-input w3-padding-16 w3-text-dark-grey" type="text" placeholder="Start Person Id" name="generateid" required></p>
+          <p>
+            <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+              <i class="fa fa-gear"></i> GENERATE
             </button>
           </p>
         </form>
