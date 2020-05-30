@@ -12,20 +12,34 @@ $username = "guest";
 $password = "guest";
 $dbname = "danDB";
 
+function printTree($db, $startid) {
+
+  $key = array_search($startid, array_column($db, 'id'));
+  $startperson = $db[$key];
+  printPerson($startperson);
+
+  $key = array_search($startperson['fatherId'], array_column($db, 'id'));
+  $father = $db[$key];
+  printPerson($father);
+
+  $key = array_search($startperson['motherId'], array_column($db, 'id'));
+  $mother = $db[$key];
+  printPerson($mother);
+
+}
+
 function printPerson($person) {
+  $id = $person['id'];
+  $firstName = $person['firstName'];
+  $lastName = $person['lastName'];
+  $gender = $person['gender'];
 
-$id = $person['id'];
-$firstName = $person['firstName'];
-$lastName = $person['lastName'];
-$gender = $person['gender'];
-
-echo "<div class=\"w3-center w3-display-container w3-col w3-card s3 m2 l1 w3-blue w3-padding\">";
-echo "<b>";
-echo "<p class=\"w3-display-topright w3-padding\">$id</p>";
-echo "<p>$firstName<br>$lastName<br>$gender</p>";
-echo "</b>";
-echo "</div>";
-
+  echo "<div class=\"w3-center w3-display-container w3-col w3-card s3 m2 l1 w3-blue w3-padding\">";
+  echo "<b>";
+  echo "<p style=\"font-style: italic;\" class=\"w3-display-topright w3-padding\">$id</p>";
+  echo "<p>$firstName<br>$lastName<br>$gender</p>";
+  echo "</b>";
+  echo "</div>";
 }
 
 try {
@@ -34,10 +48,12 @@ $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   $id = $_GET["generateid"];
 
-  $stmt = $conn->prepare("SELECT * FROM person WHERE id=$id");
+  $stmt = $conn->prepare("SELECT * FROM person");
   $stmt->execute();
   $stmt->setFetchMode(PDO::FETCH_ASSOC);
-  printPerson($stmt->fetch());
+  $fulldb = $stmt->fetchAll();
+
+  printTree($fulldb, $id);
 
 } catch(PDOException $e) {
   echo "Family tree failed:\n" . $e->getMessage();
