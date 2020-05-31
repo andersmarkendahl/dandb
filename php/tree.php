@@ -1,50 +1,67 @@
 <?php
-echo "<!DOCTYPE html>";
-echo "<html>";
-echo "<link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">";
-echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/styles.css\">";
-echo "<body class=\"\">";
-echo "<h1 class=\"w3-xxlarge w3-wide w3-center\">Family Tree</h1>";
-echo "<div class=\"w3-row w3-padding\">";
+echo "<!DOCTYPE html>\n";
+echo "<html>\n";
+echo "<link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n";
+echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/styles.css\">\n";
+echo "<body class=\"\">\n";
+echo "<h1 class=\"w3-wide w3-center\" style=\"font-size:2vw;\">Genealogy Tree</h1>\n";
+echo "<div class=\"w3-padding\">\n";
 
 $servername = "localhost";
 $username = "guest";
 $password = "guest";
 $dbname = "danDB";
 
-function printTree($db, $startid) {
+function printTree($db, $id) {
 
-  $key = array_search($startid, array_column($db, 'id'));
-  $startperson = $db[$key];
-  printPerson($startperson);
+  if ($id == NULL) {
+   return;
+  }
 
-  $key = array_search($startperson['fatherId'], array_column($db, 'id'));
-  $father = $db[$key];
-  printPerson($father);
+  $key = array_search($id, array_column($db, 'id'));
+  $root = $db[$key];
 
-  $key = array_search($startperson['motherId'], array_column($db, 'id'));
-  $mother = $db[$key];
-  printPerson($mother);
+  echo "<div class=\"w3-row-padding\">\n";
+  echo "<div class=\"w3-cell-middle\">\n";
+  printPerson($root);
+  echo "</div>\n";
+  echo "</div>\n";
+
+  echo "<div class=\"w3-row-padding\">\n";
+  echo "<div class=\"w3-cell-middle w3-half\">\n";
+  printTree($db, $root['fatherId']);
+  echo "</div>\n";
+  echo "<div class=\"w3-cell-middle w3-half\">\n";
+  printTree($db, $root['motherId']);
+  echo "</div>\n";
+  echo "</div>\n";
+
 
 }
 
 function printPerson($person) {
-  $id = $person['id'];
   $firstName = $person['firstName'];
   $lastName = $person['lastName'];
   $gender = $person['gender'];
+  $dob = $person['dateOfBirth'];
+  $dod = $person['dateOfDeath'];
 
-  echo "<div class=\"w3-center w3-display-container w3-col w3-card s3 m2 l1 w3-blue w3-padding\">";
-  echo "<b>";
-  echo "<p style=\"font-style: italic;\" class=\"w3-display-topright w3-padding\">$id</p>";
-  echo "<p>$firstName<br>$lastName<br>$gender</p>";
-  echo "</b>";
-  echo "</div>";
+  if ($gender == 'M') {
+    $color = "w3-green";
+  } elseif ($gender == 'F') {
+    $color = "w3-blue";
+  }
+
+  echo "<div class=\"w3-center w3-round-large w3-card $color\" style=\"font-size:1vw;\">\n";
+  echo "<b>\n";
+  echo "<p>$firstName<br>$lastName<br>$dob - $dod</p>\n";
+  echo "</b>\n";
+  echo "</div>\n";
 }
 
 try {
-$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   $id = $_GET["generateid"];
 
@@ -60,7 +77,8 @@ $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   echo "\n";
 }
 $conn = null;
-echo "</div>";
-echo "</body>";
-echo "</html>";
+
+echo "</div>\n";
+echo "</body>\n";
+echo "</html>\n";
 ?>
