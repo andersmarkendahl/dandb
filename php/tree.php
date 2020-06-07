@@ -2,10 +2,11 @@
 echo "<!DOCTYPE html>\n";
 echo "<html>\n";
 echo "<link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n";
-echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/styles.css\">\n";
-echo "<body class=\"\">\n";
+echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/tree.css\">\n";
+echo "<body>\n";
 echo "<h1 class=\"w3-wide w3-center\" style=\"font-size:2vw;\">Genealogy Tree</h1>\n";
-echo "<div class=\"w3-padding\">\n";
+echo "<div class=\"tree w3-center\">\n";
+echo "<ul>\n";
 
 $servername = "localhost";
 $username = "guest";
@@ -21,21 +22,13 @@ function printTree($db, $id) {
   $key = array_search($id, array_column($db, 'id'));
   $root = $db[$key];
 
-  echo "<div class=\"w3-row-padding\">\n";
-  echo "<div class=\"w3-cell-middle\">\n";
+  echo "<li>\n";
   printPerson($root);
-  echo "</div>\n";
-  echo "</div>\n";
-
-  echo "<div class=\"w3-row-padding\">\n";
-  echo "<div class=\"w3-cell-middle w3-half\">\n";
+  echo "<ul>\n";
   printTree($db, $root['fatherId']);
-  echo "</div>\n";
-  echo "<div class=\"w3-cell-middle w3-half\">\n";
   printTree($db, $root['motherId']);
-  echo "</div>\n";
-  echo "</div>\n";
-
+  echo "</ul>\n";
+  echo "</li>\n";
 
 }
 
@@ -45,18 +38,15 @@ function printPerson($person) {
   $gender = $person['gender'];
   $dob = $person['dateOfBirth'];
   $dod = $person['dateOfDeath'];
+  $id = $person['id'];
 
   if ($gender == 'M') {
-    $color = "w3-green";
+    $color = "lightgreen";
   } elseif ($gender == 'F') {
-    $color = "w3-blue";
+    $color = "powderblue";
   }
 
-  echo "<div class=\"w3-center w3-round-large w3-card $color\" style=\"font-size:1vw;\">\n";
-  echo "<b>\n";
-  echo "<p>$firstName<br>$lastName<br>$dob - $dod</p>\n";
-  echo "</b>\n";
-  echo "</div>\n";
+  echo "<a href=\"#\" style=\"background-color: $color;\">$firstName<br>$lastName</a>\n";
 }
 
 try {
@@ -78,6 +68,7 @@ try {
 }
 $conn = null;
 
+echo "</ul>\n";
 echo "</div>\n";
 echo "</body>\n";
 echo "</html>\n";
