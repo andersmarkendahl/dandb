@@ -1,168 +1,198 @@
 <!DOCTYPE html>
 <html>
-<title>Dan Data Base</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" type="text/css" href="css/styles.css">
-
+<head>
+  <title>Dan Data Base</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href=
+  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+  <link rel="stylesheet" href=
+  "https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
 <body class="w3-black w3-text-light-grey">
-
-<!-- Page Content -->
-<div class="" id="dbmain">
-
-  <!-- Header/Home -->
-  <header class="w3-container w3-padding-large w3-center w3-black" id="dbhome">
-    <h1 class="w3-xxlarge w3-wide">DanDB</h1>
-    <p>A database that starts with Dan</p>
-  </header>
-
-  <!-- Database Section -->
-  <div class="w3-row-padding" style="margin:0 -16px">
-
-    <div class="w3-half w3-padding-large">
-      <div class="w3-block w3-padding w3-border w3-round-large" id="dbinstruction">
-        <h2>Instructions</h2>
-        <p>Search with empty string to fetch whole database.</p>
-        <p>Text must be enclosed with apostrophes ('').</p>
-        <p>Operands AND, OR and NOT are supported.</>
-        <h3>Examples:</h3>
-        <ul><i>
-          <li>firstName='Anders'</li>
-          <li>firstName='Marika' OR middleName='Jan'</li>
-          <li>firstName='Jan' OR (lastName='Markendahl' AND gender='M')</li>
-        </i></ul>
+  <!-- Page Content -->
+  <div class="" id="dbmain">
+    <!-- Header/Home -->
+    <header class="w3-container w3-padding-large w3-center w3-black" id=
+    "dbhome">
+      <h1 class="w3-xxlarge w3-wide">DanDB</h1>
+      <p>A database that starts with Dan</p>
+    </header><!-- Database Section -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half w3-padding-large">
+        <div class="w3-block w3-padding w3-border w3-round-large" id=
+        "dbinstruction">
+          <h2>Instructions</h2>
+          <p>Search with empty string to fetch whole database.</p>
+          <p>Text must be enclosed with apostrophes ('').</p>
+          <p>Operands AND, OR and NOT are supported.&lt;/&gt;</p>
+          <h3>Examples:</h3>
+          <ul>
+            <li><i>firstName='Anders'</i></li>
+            <li><i>firstName='Marika' OR middleName='Jan'</i></li>
+            <li><i>firstName='Jan' OR (lastName='Markendahl' AND
+            gender='M')</i></li>
+          </ul>
+        </div>
+        <div class="w3-block" id="dbremove">
+          <h2>Remove</h2>
+          <form action="/php/remove-person.php" method="post" target=
+          "removenote">
+            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+            "text" placeholder="Username" name="username" required=""></p>
+            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+            "password" placeholder="Password" name="password" required=
+            ""></p><br>
+            <p><input class="w3-input w3-padding-16 w3-text-dark-grey" type=
+            "text" placeholder="Removal String" name="remove" required=""></p>
+            <div class="w3-col">
+              <button class="w3-left w3-button w3-light-grey w3-padding-large"
+              type="submit"><i class="material-icons">remove_circle_outline</i>
+              REMOVE</button> <iframe title="Remove Notification" style=
+              "height: 54px;" class="w3-rest w3-padding-small w3-border-0" id=
+              "remove" name="remove"></iframe>
+            </div>
+          </form>
+        </div>
+        <div class="w3-block" id="dbsearch">
+          <h2>Search</h2>
+          <form action="/php/search.php" method="get" target="searchresults">
+            <p><input class="w3-input w3-padding-16 w3-text-dark-grey" type=
+            "text" placeholder="Search String" name="search"></p>
+            <p><button class="w3-button w3-light-grey w3-padding-large" type=
+            "submit"><i class="material-icons">search</i> SEARCH</button></p>
+          </form>
+        </div>
+        <div class="w3-block" id="dbtree">
+          <h2>Generate Tree</h2>
+          <form action="/php/tree.php" method="get" target="_blank">
+            <p><input class="w3-input w3-padding-16 w3-text-dark-grey" type=
+            "text" placeholder="Start Person Id" name="generateid" required=
+            ""></p>
+            <p><button class="w3-button w3-light-grey w3-padding-large" type=
+            "submit"><i class="fa fa-gear"></i> GENERATE</button></p>
+          </form>
+        </div>
       </div>
-
-      <div class="w3-block" id="dbremove">
-        <h2>Remove</h2>
-        <form action="/php/remove-person.php" method="post" target="removenote">
-          <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="Username" name="username" required></p>
-          <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="password" placeholder="Password" name="password" required></p><br>
-          <p><input class="w3-input w3-padding-16 w3-text-dark-grey" type="text" placeholder="Removal String" name="remove" required></p>
-          <div class=w3-col">
-            <button class="w3-left w3-button w3-light-grey w3-padding-large" type="submit">
-              <i class="material-icons">remove_circle_outline</i> REMOVE
-            </button>
-            <iframe title="Remove Notification" style="height: 54px;" class="w3-rest w3-padding-small w3-border-0" id="removeid" name="removenote"></iframe>
+      <div class="w3-half w3-padding-large">
+        <div class="w3-half w3-padding-small">
+          <div class="w3-block" id="dbadd">
+            <h2>Add</h2>
+            <form action="/php/add-person.php" method="post" target="addnote">
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "text" placeholder="Username" name="username" required=""></p>
+              <p style="padding-bottom: 78px"><input class=
+              "w3-input w3-padding-8 w3-text-dark-grey" type="password"
+              placeholder="Password" name="password" required=""></p>
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "text" placeholder="firstName" name="firstName"></p>
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "text" placeholder="middleName" name="middleName"></p>
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "text" placeholder="lastName" name="lastName"></p>
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "text" placeholder="dateOfBirth (format YYYY-MM-DD)" name=
+              "dateOfBirth"></p>
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "text" placeholder="dateOfDeath (format YYYY-MM-DD)" name=
+              "dateOfDeath"></p>
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "text" placeholder="placeOfBirth" name="placeOfBirth"></p>
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "text" placeholder="gender (M or F)" name="gender" required=
+              ""></p>
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "text" placeholder="profession" name="profession"></p>
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "text" placeholder="misc (max 255 characters)" name="misc"></p>
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "text" placeholder="fatherId" name="fatherId"></p>
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "text" placeholder="motherId" name="motherId"></p>
+              <div class="w3-col">
+                <button class=
+                "w3-left w3-button w3-light-grey w3-padding-large" type=
+                "submit"><i class="material-icons">person_add</i> ADD</button>
+                <iframe title="Add Notification" style="height: 54px;" class=
+                "w3-rest w3-padding-small w3-border-0" id="add" name=
+                "add"></iframe>
+              </div>
+            </form>
           </div>
-        </form>
-      </div>
-
-      <div class="w3-block" id="dbsearch">
-        <h2>Search</h2>
-        <form action="/php/search.php" method="get" target="searchresults">
-          <p><input class="w3-input w3-padding-16 w3-text-dark-grey" type="text" placeholder="Search String" name="search"></p>
-          <p>
-            <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-              <i class="material-icons">search</i> SEARCH
-            </button>
-          </p>
-        </form>
-      </div>
-
-      <div class="w3-block" id="dbtree">
-        <h2>Generate Tree</h2>
-        <form action="/php/tree.php" method="get" target="_blank">
-          <p><input class="w3-input w3-padding-16 w3-text-dark-grey" type="text" placeholder="Start Person Id" name="generateid" required></p>
-          <p>
-            <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-              <i class="fa fa-gear"></i> GENERATE
-            </button>
-          </p>
-        </form>
-      </div>
-
-    </div>
-
-    <div class="w3-half w3-padding-large">
-      <div class="w3-half w3-padding-small">
-        <div class="w3-block" id="dbadd">
-          <h2>Add</h2>
-          <form action="/php/add-person.php" method="post" target="addnote">
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="Username" name="username" required></p>
-            <p style="padding-bottom: 78px"><input class="w3-input w3-padding-8 w3-text-dark-grey" type="password" placeholder="Password" name="password" required></p>
-
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="firstName" name="firstName"></p>
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="middleName" name="middleName"></p>
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="lastName" name="lastName"></p>
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="dateOfBirth (format YYYY-MM-DD)" name="dateOfBirth"></p>
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="dateOfDeath (format YYYY-MM-DD)" name="dateOfDeath"></p>
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="placeOfBirth" name="placeOfBirth"></p>
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="gender (M or F)" name="gender" required></p>
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="profession" name="profession"></p>
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="misc (max 255 characters)" name="misc"></p>
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="fatherId" name="fatherId"></p>
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="motherId" name="motherId"></p>
-            <div class=w3-col">
-              <button class="w3-left w3-button w3-light-grey w3-padding-large" type="submit">
-                <i class="material-icons">person_add</i> ADD
-              </button>
-              <iframe title="Add Notification" style="height: 54px;" class="w3-rest w3-padding-small w3-border-0" id="addid" name="addnote"></iframe>
-            </div>
-          </form>
         </div>
-      </div>
-      <div class="w3-half w3-padding-small">
-        <div class="w3-block" id="dbmodify">
-          <h2>Modify</h2>
-          <form action="/php/modify-person.php" method="post" target="modifynote">
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="Username" name="username" required></p>
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="password" placeholder="Password" name="password" required></p>
-            <p style="padding-bottom: 24px"><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="id" name="id" required></p>
-
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="firstName" name="firstName"></p>
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="middleName" name="middleName"></p>
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="lastName" name="lastName"></p>
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="dateOfBirth (format YYYY-MM-DD)" name="dateOfBirth"></p>
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="dateOfDeath (format YYYY-MM-DD)" name="dateOfDeath"></p>
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="placeOfBirth" name="placeOfBirth"></p>
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="gender (M or F)" name="gender"></p>
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="profession" name="profession"></p>
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="misc (max 255 characters)" name="misc"></p>
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="fatherId" name="fatherId"></p>
-            <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="motherId" name="motherId"></p>
-            <div class=w3-col">
-              <button class="w3-left w3-button w3-light-grey w3-padding-large" type="submit">
-                <i class="material-icons">person_pin</i> MODIFY
-              </button>
-              <iframe title="Modify Notification" style="height: 54px;" class="w3-rest w3-padding-small w3-border-0" id="modifyid" name="modifynote"></iframe>
-            </div>
-          </form>
+        <div class="w3-half w3-padding-small">
+          <div class="w3-block" id="dbmodify">
+            <h2>Modify</h2>
+            <form action="/php/modify-person.php" method="post" target=
+            "modifynote">
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "text" placeholder="Username" name="username" required=""></p>
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "password" placeholder="Password" name="password" required=
+              ""></p>
+              <p style="padding-bottom: 24px"><input class=
+              "w3-input w3-padding-8 w3-text-dark-grey" type="text"
+              placeholder="id" name="id" required=""></p>
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "text" placeholder="firstName" name="firstName"></p>
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "text" placeholder="middleName" name="middleName"></p>
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "text" placeholder="lastName" name="lastName"></p>
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "text" placeholder="dateOfBirth (format YYYY-MM-DD)" name=
+              "dateOfBirth"></p>
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "text" placeholder="dateOfDeath (format YYYY-MM-DD)" name=
+              "dateOfDeath"></p>
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "text" placeholder="placeOfBirth" name="placeOfBirth"></p>
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "text" placeholder="gender (M or F)" name="gender"></p>
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "text" placeholder="profession" name="profession"></p>
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "text" placeholder="misc (max 255 characters)" name="misc"></p>
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "text" placeholder="fatherId" name="fatherId"></p>
+              <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
+              "text" placeholder="motherId" name="motherId"></p>
+              <div class="w3-col">
+                <button class=
+                "w3-left w3-button w3-light-grey w3-padding-large" type=
+                "submit"><i class="material-icons">person_pin</i>
+                MODIFY</button> <iframe title="Modify Notification" style=
+                "height: 54px;" class="w3-rest w3-padding-small w3-border-0"
+                id="modify" name="modify"></iframe>
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
-    </div>
-
-    <iframe title="Search Results" class="w3-padding-large" style="width: 100%;height: 600px;" id="searchid" name="searchresults"></iframe>
-    <script>
+      </div><iframe title="Search Results" class="w3-padding-large" style=
+      "width: 100%;height: 600px;" id="search" name="search"></iframe> 
+      <script>
       // Selecting the iframe element
       var iframe = document.getElementById("searchid");
       // Adjusting the iframe height onload event
       iframe.onload = function(){
         iframe.style.height = iframe.contentWindow.document.documentElement.scrollHeight + 'px';
       }
-    </script>
-
+      </script>
+    </div><!-- End Database Section -->
+    <!-- Footer -->
+    <footer class="w3-padding-64 w3-text-grey w3-center">
+      <p class="w3-medium">Credit where credit is due, powered by <a href=
+      "https://www.mysql.com" target="_blank" class=
+      "w3-hover-text-white extlink">MySQL</a>, <a href="https://www.php.net"
+      target="_blank" class="w3-hover-text-white extlink">PHP</a> and <a href=
+      "https://www.w3schools.com/w3css/default.asp" target="_blank" class=
+      "w3-hover-text-white extlink">w3.css</a></p><!-- End footer -->
+    </footer><!-- END PAGE CONTENT -->
   </div>
-  <!-- End Database Section -->
-
-  <!-- Footer -->
-  <footer class="w3-padding-64 w3-text-grey w3-center">
-    <p class="w3-medium">Credit where credit is due, powered by 
-      <a href="https://www.mysql.com" target="_blank" class="w3-hover-text-white extlink">MySQL</a>, 
-      <a href="https://www.php.net" target="_blank" class="w3-hover-text-white extlink">PHP</a> and 
-      <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-white extlink">w3.css</a>
-    </p>
-  <!-- End footer -->
-  </footer>
-
-<!-- END PAGE CONTENT -->
-</div>
-
-<script src="js/scripts.js"></script>
-
+  <script src="js/scripts.js">
+  </script>
 </body>
 </html>
