@@ -40,7 +40,7 @@
         <div class="w3-block" id="dbremove">
           <h2>Remove</h2>
           <form action="/php/remove-person.php" method="post" target=
-          "removenote">
+          "removeresults">
             <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
             "text" placeholder="Username" name="username" required=""></p>
             <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
@@ -53,7 +53,7 @@
               type="submit"><i class="material-icons">remove_circle_outline</i>
               REMOVE</button> <iframe title="Remove Notification" style=
               "height: 54px;" class="w3-rest w3-padding-small w3-border-0" id=
-              "remove" name="remove"></iframe>
+              "removeresults" name="removeresults"></iframe>
             </div>
           </form>
         </div>
@@ -81,7 +81,7 @@
         <div class="w3-half w3-padding-small">
           <div class="w3-block" id="dbadd">
             <h2>Add</h2>
-            <form action="/php/add-person.php" method="post" target="addnote">
+            <form action="/php/add-person.php" method="post" target="addresults">
               <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
               "text" placeholder="Username" name="username" required=""></p>
               <p style="padding-bottom: 78px"><input class=
@@ -117,8 +117,8 @@
                 "w3-left w3-button w3-light-grey w3-padding-large" type=
                 "submit"><i class="material-icons">person_add</i> ADD</button>
                 <iframe title="Add Notification" style="height: 54px;" class=
-                "w3-rest w3-padding-small w3-border-0" id="add" name=
-                "add"></iframe>
+                "w3-rest w3-padding-small w3-border-0" id="addresults" name=
+                "addresults"></iframe>
               </div>
             </form>
           </div>
@@ -127,7 +127,7 @@
           <div class="w3-block" id="dbmodify">
             <h2>Modify</h2>
             <form action="/php/modify-person.php" method="post" target=
-            "modifynote">
+            "modifyresults">
               <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
               "text" placeholder="Username" name="username" required=""></p>
               <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
@@ -166,7 +166,7 @@
                 "submit"><i class="material-icons">person_pin</i>
                 MODIFY</button> <iframe title="Modify Notification" style=
                 "height: 54px;" class="w3-rest w3-padding-small w3-border-0"
-                id="modify" name="modify"></iframe>
+                id="modifyresults" name="modifyresults"></iframe>
               </div>
             </form>
           </div>
