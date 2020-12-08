@@ -13,142 +13,12 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body class="w3-black w3-text-light-grey">
-  <!-- Icon Bar (Sidebar - hidden on small screens) -->
-  <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-    <a href="#" style="padding-top: 30px" class=
-    "w3-bar-item w3-button w3-hover-black"><i class=
-    "glyphicon glyphicon-home w3-xxlarge"></i>
-    <p>HOME</p></a> <a href="#about" class=
-    "w3-bar-item w3-button w3-padding-large w3-hover-black"><i class=
-    "glyphicon glyphicon-user w3-xxlarge"></i>
-    <p>ABOUT</p></a> <a href="#github" class=
-    "w3-bar-item w3-button w3-padding-large w3-hover-black"><i class=
-    "fa fa-github w3-xxlarge"></i>
-    <p>GITHUB</p></a> <a href="#dblink" class=
-    "w3-bar-item w3-button w3-padding-large w3-hover-black"><i class=
-    "glyphicon glyphicon-tree-deciduous w3-xxlarge"></i>
-    <p>DATABASE</p></a> <a href="#photos" class=
-    "w3-bar-item w3-button w3-padding-large w3-hover-black"><i class=
-    "glyphicon glyphicon-camera w3-xxlarge"></i>
-    <p>PHOTOS</p></a> <a href="#contact" class=
-    "w3-bar-item w3-button w3-padding-large w3-hover-black"><i class=
-    "fa fa-envelope w3-xxlarge"></i>
-    <p>CONTACT</p></a>
-  </nav><!-- Navbar on small screens (Hidden on medium and large screens) -->
-  <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-    <div class=
-    "w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-      <a href="#" class="w3-bar-item w3-button" style=
-      "width:25% !important">HOME</a> <a href="#about" class=
-      "w3-bar-item w3-button" style="width:25% !important">ABOUT</a> <a href=
-      "#github" class="w3-bar-item w3-button" style=
-      "width:25% !important">GITHUB</a> <a href="#dblink" class=
-      "w3-bar-item w3-button" style="width:25% !important">DATABASE</a>
-      <a href="#photos" class="w3-bar-item w3-button" style=
-      "width:25% !important">PHOTOS</a> <a href="#contact" class=
-      "w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
-    </div>
-  </div><!-- Page Content -->
   <div class="w3-padding-large" id="main">
     <!-- Header/Home -->
     <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-      <h1 class="w3-xxlarge w3-wide"><span class="w3-hide-small">I'm</span>
-      Anders Markendahl.</h1>
-      <p>Software Developer and Software Architect</p><img src=
-      "/images/oddoswim.jpg" alt="Intro Image" class="w3-image" width="50%"
-      height="50%">
-    </header><!-- About Section -->
-    <div class="w3-content w3-justify w3-padding-64" id="about">
-      <h2>Anders Markendahl</h2>
-      <hr style="width:200px" class="w3-opacity">
-      <div class="w3-table">
-        <div class="w3-half w3-padding">
-          <p>My name is Anders Markendahl and I live in Uppsala, Sweden, with
-          my wife and three kids. Uppsala is a small and vibrant city 50km
-          north of Stockholm.</p>
-          <p>Professionally I am a software developer with +10 years of
-          experience. My technical expertise revolves mostly around IP
-          Networking software, which includes loadbalancing and routing. I am
-          also experienced in leading a team of developers and working
-          according to Agile workflows.</p>
-          <p>In my spare time I usually play around with some coding projects
-          that is outside the area of my professional life. You can find some
-          of those projects under the Projects tab and another project is this
-          very webpage that you are looking at (written and hosted by me).</p>
-        </div>
-        <div class="w3-half w3-padding"><img src="/images/anders.jpg" alt=
-        "Personal Image" class="w3-card" style="width:50%"></div>
-      </div><!-- End About Section -->
-    </div><!-- Skills Section -->
-    <div class="w3-content w3-justify w3-padding-64" id="skills">
-      <h2>My Skills</h2>
-      <hr style="width:200px" class="w3-opacity">
-      <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-      <div class="w3-content w3-container w3-padding-64">
-        <div class="w3-row-padding w3-center">
-          <div class="w3-col m3"><img src="/images/cicd.png" style="width:60%"
-          onclick="onClick(this)" class="w3-opacity w3-hover-opacity-off" alt=
-          "Continous Intergration and Continous Deployment: I have worked with large organizations migrating from a waterfall model to full CI/CD development pipeline including integration with customer. Full automation of: build, test (including test reports and specifications), and product documentation. I have many years experience developing using Jenkins, including hosting and managing my own Jenkins server. I have also basic knowledge of CircleCI."></div>
-          <div class="w3-col m3"><img src="/images/programming.png" style=
-          "width:60%" onclick="onClick(this)" class=
-          "w3-opacity w3-hover-opacity-off" alt="Programming: During my career I have written most code in C and Golang. I have also extensive experince writing Linux shell scripts (Bash) for utility, builds and test. I have also worked as a software architect (+3 years) for products in the networking domain."></div>
-          <div class="w3-col m3"><img src="/images/linux.png" style="width:60%"
-          onclick="onClick(this)" class="w3-opacity w3-hover-opacity-off" alt=
-          "Linux and Linux Distributions: I have deployed production grade software on multiple Linux distributions including Ubuntu, SLES, Redhat and CentOS. I have directly been managing Ubuntu based servers for many years. I also possess knowledge about Linux file structure and basic knowledge of the Linux kernel. For development I use Ubuntu distribution on my local machine."></div>
-        </div>
-        <div class="w3-row-padding w3-center w3-section">
-          <div class="w3-col m3"><img src="/images/iplb.png" style="width:60%"
-          onclick="onClick(this)" class="w3-opacity w3-hover-opacity-off" alt=
-          "IP Networking and Loadbalancing: I have worked with software loadbalancers for network traffic in OSI Layers 3/4/7. The software I have developed also includes external connectivity interacting with Routers and Data Center Gateways using protocols such as BGP, OSPF and BFD. Routing software suites I have integrated includes Quagga/Zebra and BIRD."></div>
-          <div class="w3-col m3"><img src="/images/agile.png" style="width:60%"
-          onclick="onClick(this)" class="w3-opacity w3-hover-opacity-off" alt=
-          "Agile Methodologies: I have been working with Agile software development using Kanban or Scrum for +10 years. In addition to working as a Software Developer in Agile teams, I have also worked as Scrum Master (+4 years) and Agile Product Owner (+2 years)"></div>
-        </div>
-      </div><!-- Modal for full size images on click-->
-      <div id="modal01" class="w3-modal w3-black" onclick=
-      "this.style.display='none'">
-        <span class="w3-button w3-large w3-black w3-display-topright" title=
-        "Close Modal Image"><i class="fa fa-remove"></i></span>
-        <div class=
-        "w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-          <img id="img01" alt="modal image" class="w3-image">
-          <p id="caption" class="w3-opacity w3-large w3-padding-32"></p>
-        </div>
-      </div><!-- End Skills Section -->
-    </div><!-- GitHub Section -->
-    <div class="w3-padding-64 w3-content" id="github">
-      <h2>My Github</h2>
-      <hr style="width:200px" class="w3-opacity">
-      <p>A list of personal software projects, also linked on
-      my <a href="https://github.com/andersmarkendahl/" class="w3-hover-text-grey extlink"
-      target="_blank">Github Profile</a>.</p>
-      <p>These projects are outside the area of Networking, but instead written
-      for educational purposes.</p><a href="https://github.com/andersmarkendahl/satellit"
-      class="w3-block w3-padding-large w3-hover-white extlink" target=
-      "_blank"><img src="/images/satellit.png" alt="satellit" class=
-      "w3-left w3-margin-right" style="width:80px">
-      <p><span class="w3-large w3-margin-right">Satellit</span> Space Arcade
-      Game</p>
-      <p style="font-style: italic;">Tags: C (Programming Language), SDL2.0,
-      Unit-Test, CUnit, DoxyGen</p><br></a> <a href=
-      "https://github.com/andersmarkendahl/go-star-sim" class=
-      "w3-block w3-padding-large w3-hover-white extlink" target=
-      "_blank"><img src="/images/gostarsim.png" alt="gostarsim" class=
-      "w3-left w3-margin-right" style="width:80px">
-      <p><span class="w3-large w3-margin-right">Go-Star-Sim</span> Star System
-      Simulation</p>
-      <p style="font-style: italic;">Tags: Go (Programming Language),
-      N-Body-Problem, Goroutines, CircleCi</p><br></a> <a href=
-      "https://github.com/andersmarkendahl/go-ball-sim" class=
-      "w3-block w3-padding-large w3-hover-white extlink" target=
-      "_blank"><img src="/images/goballsim.png" alt="goballsim" class=
-      "w3-left w3-margin-right" style="width:80px">
-      <p><span class="w3-large w3-margin-right">Go-Ball-Sim</span> Ball
-      Simulation</p>
-      <p style="font-style: italic;">Tags: Go (Programming Language),
-      Unit-Test, Github-PR-Tests, Jenkins</p><br></a> 
-      <!-- End Github Section -->
-    </div><!-- Database Section -->
+      <h1 class="w3-xxlarge w3-wide">andersmarkendahl.ddns.net</h1>
+    </header>
+    <!-- DataBase Section -->
     <div class="w3-padding-64 w3-content" id="dblink">
       <h2>Database</h2>
       <hr style="width:200px" class="w3-opacity">
@@ -162,42 +32,12 @@
       <p style="font-style: italic;">Tags: MySQL, PHP</p><br></a> 
       <!-- End Database Section -->
     </div>
-    <div class="w3-padding-64 w3-content" id="photos">
-      <h2>My Photos</h2>
-      <hr style="width:200px" class="w3-opacity">
-      <!-- Grid for photos -->
-      <div class="w3-row-padding" style="margin:0 -16px">
-        <div class="w3-half"><img src="/images/falunbath.jpg" alt="Falun Bath"
-        style="width:100%"> <img src="/images/falunsyren.jpg" alt=
-        "Falun Vegetation" style="width:100%"> <img src=
-        "/images/oddocliffs.jpg" alt="Öddö Cliffs" style="width:100%"></div>
-        <div class="w3-half"><img src="/images/oddohouse.jpg" alt="Öddö House"
-        style="width:100%"> <img src="/images/oddosunset.jpg" alt="Öddö Sunset"
-        style="width:100%"> <img src="/images/oddowestcoast.jpg" alt=
-        "Westcoast" style="width:100%"></div><!-- End photo grid -->
-      </div><!-- End Portfolio Section -->
-    </div><!-- Contact Section -->
-    <div class="w3-padding-64 w3-content" id="contact">
-      <h2>Contact Me</h2>
-      <hr style="width:200px" class="w3-opacity">
-      <div class="w3-section">
-        <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"></i>
-        Email: andersmarkendahl@gmail.com</p>
-        <p><i class="fa fa-linkedin fa-fw w3-xxlarge w3-margin-right"></i>
-        <a href="https://www.linkedin.com/in/andersmarkendahl/" target="_blank"
-        class="w3-hover-text-white extlink">Linkedin Profile</a></p>
-        <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>
-        <a href="https://goo.gl/maps/B54bUncus6tHotbj6/" target="_blank" class=
-        "w3-hover-text-white extlink">Uppsala, Sweden</a></p>
-      </div><!-- End Contact Section -->
-    </div><!-- Footer -->
+    <!-- Footer -->
     <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
       <p class="w3-medium">Credit where credit is due, powered by <a href=
       "https://www.w3schools.com/w3css/default.asp" target="_blank" class=
       "w3-hover-text-white extlink">w3.css</a></p><!-- End footer -->
     </footer><!-- END PAGE CONTENT -->
   </div>
-  <script src="js/scripts.js">
-  </script>
 </body>
 </html>
