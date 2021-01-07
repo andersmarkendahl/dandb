@@ -16,10 +16,13 @@ $dbname = "danDB";
 function printTree($db, $id) {
 
   if ($id == NULL) {
-   return;
+    return;
   }
 
   $key = array_search($id, array_column($db, 'id'));
+  if (!$key) {
+    return;
+  }
   $root = $db[$key];
 
   echo "<li>\n";
