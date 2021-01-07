@@ -20,7 +20,7 @@ function printTree($db, $id) {
   }
 
   $key = array_search($id, array_column($db, 'id'));
-  if ($key == false) {
+  if ($key === false) {
     return;
   }
   $root = $db[$key];
