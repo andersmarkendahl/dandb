@@ -36,12 +36,16 @@ function printTree($db, $id) {
 }
 
 function printPerson($person) {
+  $id = $person['id'];
   $firstName = $person['firstName'];
+  $middleName = $person['middleName'];
   $lastName = $person['lastName'];
   $gender = $person['gender'];
   $dob = $person['dateOfBirth'];
   $dod = $person['dateOfDeath'];
-  $id = $person['id'];
+  $pob = $person['placeOfBirth'];
+  $profession = $person['profession'];
+  $misc = $person['misc'];
 
   if ($gender == 'M') {
     $color = "lightgreen";
@@ -52,8 +56,13 @@ function printPerson($person) {
   echo "<div class=\"leaf w3-dropdown-hover\" style=\"background-color: $color;\">";
   echo "<p>$firstName<br>$lastName</p>";
   echo "<div class=\"w3-dropdown-content w3-card w3-left-align w3-padding\">";
-  echo "<p>Lorem</p>";
-  echo "<p>Ipsussss</p>";
+  echo "<p>Name: $firstName $middleName $lastName</p>";
+  echo "<p>Date of birth: $dob</p>";
+  echo "<p>Date of death: $dod</p>";
+  echo "<p>Birthplace: $pob</p>";
+  echo "<p>Gender: $gender</p>";
+  echo "<p>Profession: $profession</p>";
+  echo "<p>Additional Info: $misc</p>";
   echo "</div>";
   echo "</div>";
 }
