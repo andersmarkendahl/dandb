@@ -49,7 +49,13 @@ function printPerson($person) {
     $color = "powderblue";
   }
 
-  echo "<a href=\"#\" style=\"background-color: $color;\">$firstName<br>$lastName</a>\n";
+  echo "<div class=\"leaf w3-dropdown-hover\" style=\"background-color: $color;\">";
+  echo "<p>$firstName<br>$lastName</p>";
+  echo "<div class=\"w3-dropdown-content w3-card w3-left-align w3-padding\">";
+  echo "<p>Lorem</p>";
+  echo "<p>Ipsussss</p>";
+  echo "</div>";
+  echo "</div>";
 }
 
 try {
