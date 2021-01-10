@@ -1,12 +1,13 @@
 <?php
 echo "<!DOCTYPE html>\n";
 echo "<html>\n";
+echo "<head>\n";
 echo "<link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n";
 echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/tree.css\">\n";
+echo "</head>\n";
 echo "<body>\n";
-echo "<h1 class=\"w3-wide w3-center\" style=\"font-size:2vw;\">Genealogy Tree</h1>\n";
-echo "<div class=\"tree w3-center\">\n";
-echo "<ul>\n";
+echo "<h1 class=\"w3-wide w3-center w3-padding-32\" style=\"font-size:3vw;\">Genealogy Tree</h1>\n";
+echo "<div class=\"tree\">\n";
 
 $servername = "localhost";
 $username = "guest";
@@ -25,13 +26,13 @@ function printTree($db, $id) {
   }
   $root = $db[$key];
 
+  echo "<ul>\n";
   echo "<li>\n";
   printPerson($root);
-  echo "<ul>\n";
   printTree($db, $root['fatherId']);
   printTree($db, $root['motherId']);
-  echo "</ul>\n";
   echo "</li>\n";
+  echo "</ul>\n";
 
 }
 
@@ -48,14 +49,14 @@ function printPerson($person) {
   $misc = $person['misc'];
 
   if ($gender == 'M') {
-    $color = "lightgreen";
+    $color = "w3-green";
   } elseif ($gender == 'F') {
-    $color = "powderblue";
+    $color = "w3-blue";
   }
 
-  echo "<div class=\"leaf w3-dropdown-hover\" style=\"background-color: $color;\">";
-  echo "<p>$firstName<br>$lastName</p>";
-  echo "<div class=\"w3-dropdown-content w3-card w3-left-align w3-padding\">";
+  echo "<div class=\"leaf w3-dropdown-hover w3-text-black $color\">";
+  echo "<p>$firstName $lastName</p>";
+  echo "<div class=\"w3-dropdown-content w3-card w3-padding w3-left-align\" style=\"width:400px\">";
   echo "<p>Name: $firstName $middleName $lastName</p>";
   echo "<p>Date of birth: $dob</p>";
   echo "<p>Date of death: $dod</p>";
