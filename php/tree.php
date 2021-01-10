@@ -54,7 +54,7 @@ function printPerson($person) {
     $color = "w3-blue";
   }
 
-  echo "<div class=\"leaf w3-dropdown-hover w3-text-black $color\">";
+  echo "<div class=\"leaf w3-dropdown-hover w3-text-black $color\">\n";
   echo "<p>$firstName $lastName</p>";
   echo "<div class=\"w3-dropdown-content w3-card w3-padding w3-left-align\" style=\"width:400px\">";
   echo "<p>Name: $firstName $middleName $lastName</p>";
@@ -64,7 +64,7 @@ function printPerson($person) {
   echo "<p>Gender: $gender</p>";
   echo "<p>Profession: $profession</p>";
   echo "<p>Additional Info: $misc</p>";
-  echo "</div>";
+  echo "</div>\n";
   echo "</div>";
 }
 
