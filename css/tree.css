@@ -1,5 +1,6 @@
 .tree {
 	padding-left: 0px;
+	color: black;
 }
 .tree ul {
 	padding-left: 100px;
@@ -32,6 +33,8 @@
 
 .dropdown {
 	width: 400px;
+	padding: 8px 16px 8px 16px;
+	text-align: left;
 	font-weight: normal;
 	line-height: 150%;
 }
