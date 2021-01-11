@@ -55,15 +55,15 @@ function printPerson($person) {
   }
 
   echo "<div class=\"leaf w3-dropdown-hover w3-text-black $color\">\n";
-  echo "<p>$firstName $lastName</p>";
-  echo "<div class=\"w3-dropdown-content w3-card w3-padding w3-left-align\" style=\"width:400px\">";
-  echo "<p>Name: $firstName $middleName $lastName</p>";
-  echo "<p>Date of birth: $dob</p>";
-  echo "<p>Date of death: $dod</p>";
-  echo "<p>Birthplace: $pob</p>";
-  echo "<p>Gender: $gender</p>";
-  echo "<p>Profession: $profession</p>";
-  echo "<p>Additional Info: $misc</p>";
+  echo "$firstName $lastName";
+  echo "<div class=\"dropdown w3-dropdown-content w3-card w3-padding w3-left-align\">";
+  echo "<b>Name:</b> $firstName $middleName $lastName<br>";
+  echo "<b>Date of birth:</b> $dob<br>";
+  echo "<b>Date of death:</b> $dod<br>";
+  echo "<b>Birthplace:</b> $pob<br>";
+  echo "<b>Gender:</b> $gender<br>";
+  echo "<b>Profession:</b> $profession<br>";
+  echo "<b>Additional Info:</b> $misc<br>";
   echo "</div>\n";
   echo "</div>";
 }

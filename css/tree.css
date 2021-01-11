@@ -14,3 +14,9 @@
 	border: 2px solid black;
 	border-radius: 5px;
 }
+
+.dropdown {
+	width: 400px;
+	font-weight: normal;
+	line-height: 150%;
+}
