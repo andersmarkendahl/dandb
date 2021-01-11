@@ -49,13 +49,13 @@ function printPerson($person) {
   $misc = $person['misc'];
 
   if ($gender == 'M') {
-    $color = "w3-green";
+    $icon = "9794";
   } elseif ($gender == 'F') {
-    $color = "w3-blue";
+    $icon = "9792";
   }
 
-  echo "<div class=\"leaf w3-dropdown-hover w3-text-black $color\">\n";
-  echo "$firstName<br>$lastName";
+  echo "<div class=\"leaf w3-dropdown-hover w3-text-black\">\n";
+  echo "$firstName <span class=\"gender\">&#$icon</span><br>$lastName";
   echo "<div class=\"dropdown w3-dropdown-content w3-card w3-padding w3-left-align\">";
   echo "<b>Name:</b> $firstName $middleName $lastName<br>";
   echo "<b>Date of birth:</b> $dob<br>";
