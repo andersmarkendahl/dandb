@@ -2,6 +2,7 @@
 echo "<!DOCTYPE html>\n";
 echo "<html>\n";
 echo "<head>\n";
+echo "<meta charset=\"UTF-8\">";
 echo "<link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n";
 echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/tree.css\">\n";
 echo "</head>\n";
