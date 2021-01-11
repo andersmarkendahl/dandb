@@ -63,7 +63,7 @@ function printPerson($person) {
   echo "<b>Birthplace:</b> $pob<br>";
   echo "<b>Gender:</b> $gender<br>";
   echo "<b>Profession:</b> $profession<br>";
-  echo "<b>Additional Info:</b> $misc<br>";
+  echo "<b>Additional Info:</b><br> $misc<br>";
   echo "</div>\n";
   echo "</div>";
 }

@@ -3,12 +3,12 @@
 }
 .tree ul {
 	padding-left: 100px;
-	line-height: 80%;
+	line-height: 100%;
 	list-style-type: none;
 }
 
 .leaf {
-	width: 200px;
+	width: 150px;
 	font-size: 14px;
 	font-weight: normal;
 	padding: 4px 8px 4px 8px;
