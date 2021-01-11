@@ -55,7 +55,7 @@ function printPerson($person) {
   }
 
   echo "<div class=\"leaf w3-dropdown-hover w3-text-black\">\n";
-  echo "$firstName <span class=\"gender\">&#$icon</span><br>$lastName";
+  echo "$firstName <span class=\"icon\">&#$icon</span><br>$lastName";
   echo "<div class=\"dropdown w3-dropdown-content w3-card w3-padding w3-left-align\">";
   echo "<b>Name:</b> $firstName $middleName $lastName<br>";
   echo "<b>Date of birth:</b> $dob<br>";

@@ -5,6 +5,20 @@
 	padding-left: 100px;
 	line-height: 100%;
 	list-style-type: none;
+	margin-left: 5px;
+}
+
+.tree li {
+	border-left: 1px solid black;
+}
+.tree li:before {
+	border-bottom: 2px solid black;
+	position: relative;
+	top: -0.8em;
+	width: 12px;
+	content: "";
+	display: inline-block;
+	left: -1px;
 }
 
 .leaf {
@@ -22,7 +36,7 @@
 	line-height: 150%;
 }
 
-.gender {
+.icon {
 	font-size: 30px;
 	font-weight: bold;
 	position: absolute;
