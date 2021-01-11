@@ -40,9 +40,8 @@
 }
 
 .icon {
-	font-size: 30px;
-	font-weight: bold;
+	font-size: 26px;
 	position: absolute;
 	top: 2px;
-	right: -5px;
+	right: -3px;
 }
