@@ -73,7 +73,7 @@ try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-  $id = $_GET["generateid"];
+  $id = isset($_GET['generateid']) ? $_GET['generateid'] : "52";
 
   $stmt = $conn->prepare("SELECT * FROM person");
   $stmt->execute();
