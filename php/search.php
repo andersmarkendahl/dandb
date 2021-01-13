@@ -52,7 +52,7 @@ try {
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   $search = $_GET["search"];
-  echo "<h2>Search Results: $search</h2>";
+  echo "<h2> Search Results: $search</h2>";
 
   if (empty($search)) {
     $stmt = $conn->prepare("SELECT * FROM person");
