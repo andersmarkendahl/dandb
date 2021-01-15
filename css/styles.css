@@ -9,3 +9,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif}
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
 
 .extlink {color: inherit;text-decoration: none;}
+
+.service hr {width:300px;opacity: 0.5;}
+.service img {width:80px;}
