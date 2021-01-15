@@ -55,7 +55,8 @@ function printPerson($person) {
   }
 
   echo "<div class=\"leaf\">\n";
-  echo "$firstName <span class=\"icon\">&#$icon</span><br>$lastName";
+  echo "<p>$firstName<br>$lastName</p>";
+  echo "<span class=\"icon\">&#$icon</span>";
   echo "<div class=\"dropdown\">";
   echo "<b>Name:</b> $firstName $middleName $lastName<br>";
   echo "<b>Date of birth:</b> $dob<br>";
