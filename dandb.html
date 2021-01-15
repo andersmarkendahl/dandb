@@ -4,7 +4,6 @@
   <title>Dan Data Base</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
   <link rel="stylesheet" href=
   "https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -27,8 +26,8 @@
     </div>
     <p class="w3-display-bottommiddle">Database that starts with Dan</p>
   </header>
-  <div class="w3-padding-large" id="dbmain">
-    <div class="w3-block w3-half w3-padding-small" id="dbsearch">
+  <div class="full" id="dbmain">
+    <div class="action" id="dbsearch">
       <h2>Search</h2>
       <p>Empty string to fetch whole database.</p>
       <p>Text must be enclosed with apostrophes ('').</p>
@@ -47,7 +46,7 @@
         "submit"><i class="material-icons">search</i> SEARCH</button></p>
       </form>
     </div>
-    <div class="w3-block w3-half w3-padding-small" id="dbtree">
+    <div class="action" id="dbtree">
       <h2>Generate Tree</h2>
       <p>Empty input generates full tree.</p>
       <p>Insert id of person to generate subtree.</p>
@@ -59,7 +58,7 @@
         GENERATE</button></p>
       </form>
     </div>
-    <div class="w3-padding-32">
+    <div id="dbresult">
       <iframe title="Search Results" style="width: 100%;height: 600px;" id=
       "searchresults" name="searchresults"></iframe>
     </div>
