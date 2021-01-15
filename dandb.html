@@ -36,10 +36,8 @@
         gender='F')</i></li>
       </ul>
       <form action="/php/search.php" method="get" target="searchresults">
-        <p><input class="w3-input w3-padding-16 w3-text-dark-grey" type="text"
-        placeholder="Search String (optional)" name="search"></p>
-        <p><button class="w3-button w3-light-grey w3-padding-large" type=
-        "submit"><i class="material-icons">search</i> SEARCH</button></p>
+        <p><input type="text" placeholder="Filter (optional)" name="search"></p>
+        <p><button type="submit"><i class="material-icons">search</i> SEARCH</button></p>
       </form>
     </div>
     <div class="action" id="dbtree">
@@ -47,11 +45,8 @@
       <p>Empty input generates full tree.</p>
       <p>Insert id of person to generate subtree.</p>
       <form action="/php/tree.php" method="get" target="_blank">
-        <p><input class="w3-input w3-padding-16 w3-text-dark-grey" type="text"
-        placeholder="Start Person Id (optional)" name="generateid"></p>
-        <p><button class="w3-button w3-light-grey w3-padding-large" type=
-        "submit"><i class="glyphicon glyphicon-tree-deciduous"></i>
-        GENERATE</button></p>
+        <p><input type="text" placeholder="Start Id (optional)" name="generateid"></p>
+        <p><button type="submit"><i class="glyphicon glyphicon-tree-deciduous"></i>GENERATE</button></p>
       </form>
     </div>
     <div id="dbresult">
