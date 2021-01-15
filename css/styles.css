@@ -92,29 +92,38 @@ header p {
 }
 
 #dbmain {
-	padding: 8px 16px 8px 16px;
+	padding: 8px 32px 8px 32px;
 	font-size: 18px;
 }
-@media only screen and (max-width: 600px) {
-	#dbmain {padding: 8px 0px 8px 0px;}
-
-}
-
 #dbsearch {
 	float: left;
 }
 #dbtree {
 	float: right;
 }
-
 .action {
 	display: block;
 	width: 50%;
-	padding: 8px 16px 8px 16px;
+	padding: 8px 32px 8px 32px;
+}
+.action h2 {
+	font-size: 28px;
+}
+@media only screen and (max-width: 600px) {
+	#dbmain {padding: 8px 4px 8px 4px;font-size:14px;}
+	#dbsearch {float: none;}
+	#dbtree {float: none;}
+	.action {width: 100%;padding: 8px 16px 8px 16px;}
+	.settings i {font-size: 32px;}
+	header h1 { font-size: 32px;}
+	header p { font-size: 16px;}
+	.action h2 {font-size: 20px;
+}
 }
 
 .action input {
 	padding: 8px 16px 8px 16px;
+	width: 100%;
 }
 .action button {
 	padding: 8px 16px 8px 16px;
