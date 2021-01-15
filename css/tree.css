@@ -63,7 +63,5 @@ h1 {
 
 .icon {
 	font-size: 26px;
-	position: absolute;
-	top: 2px;
-	right: 0px;
+	float: right;
 }
