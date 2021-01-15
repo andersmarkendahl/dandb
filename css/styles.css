@@ -1,14 +1,49 @@
 body, h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif}
 
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-
 .extlink {color: inherit;text-decoration: none;}
 
-.service hr {width:300px;opacity: 0.5;}
-.service img {width:80px;}
+body {
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+#intro {
+	display: block;
+}
+
+header {
+	font-size: 36px;
+	padding-bottom: 32px;
+}
+
+.service {
+	display: block;
+}
+.service hr {
+	width:300px;
+	opacity: 0.5;
+}
+.service img {
+	width:80px;
+	float: left;
+	padding: 0px 24px 0px 0px;
+}
+.service a {
+	padding: 12px 0px 0px 12px;
+	display: block;
+	width: 75%;
+	margin-right: auto;
+	border: 1px solid black;
+}
+.service a:hover {
+	border: 1px solid white;
+}
+.service .a p {
+	float: right;
+	font-size:16px;
+}
+
+.service span {
+	font-size:18px;
+}
