@@ -7,7 +7,7 @@ echo "<link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\"
 echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/tree.css\">\n";
 echo "</head>\n";
 echo "<body>\n";
-echo "<h1 class=\"w3-wide w3-center w3-padding-32\" style=\"font-size:3vw;\">Genealogy Tree</h1>\n";
+echo "<h1>Genealogy Tree</h1>\n";
 echo "<div class=\"tree\">\n";
 
 $servername = "localhost";
