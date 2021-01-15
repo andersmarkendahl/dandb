@@ -1,9 +1,9 @@
 h1 {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  text-align: center;
-  font-stretch: expanded;
-  style=font-size:3vw;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	text-align: center;
+	font-stretch: expanded;
+	font-size:3vw;
 }
 
 .tree {
@@ -39,12 +39,21 @@ h1 {
 	border-radius: 3px;
 }
 
+.leaf:hover .dropdown {
+	display: block;
+}
+
 .dropdown {
+	display:none;
+	position: absolute;
+	background-color: #f9f9f9;
 	width: 400px;
 	padding: 8px 16px 8px 16px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	text-align: left;
 	font-weight: normal;
 	line-height: 150%;
+	z-index: 1;
 }
 
 .icon {
