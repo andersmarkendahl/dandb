@@ -7,7 +7,10 @@ body {
 	background-color: black;
 }
 header {text-align: center;}
-header h1 {font-size: 64px;}
+header h1 {
+	font-size: 64px;
+	font-weight: normal;
+}
 header p {font-size: 32px;}
 footer {
 	font-size: 18px;
