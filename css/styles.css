@@ -120,6 +120,49 @@ footer {
 	background-color: #cccccc;
 }
 
+/* DandDB Admin */
+
+#adminmain {
+	font-size: 18px;
+	width: 100%;
+	margin-left: 8px;
+	margin-right: 8px;
+	padding-top: 16px;
+	padding-bottom: 64px;
+}
+.admin {
+	display: block;
+	width: 33.33%;
+	float: left;
+	padding-bottom: 12px;
+}
+.admin h2 {
+	font-size: 28px;
+}
+.admin input {
+	padding: 8px 2px 8px 2px;
+	width: 95%;
+	font-size: 16px;
+}
+.admin ::placeholder {color: #404040;opacity: 1;}
+.admin :-ms-input-placeholder {color: #404040;}
+.admin ::-ms-input-placeholder {color: #404040;}
+.admin button {
+	padding: 8px 16px 8px 16px;
+	color: #404040;
+	transition-duration: 0.4s;
+	float: left;
+}
+.admin button:hover {
+	color: #1a1a1a;
+	background-color: #cccccc;
+}
+.admin iframe {
+	height: 46px;
+	float: left;
+	border: 0px;
+}
+
 @media only screen and (max-width: 600px) {
 	header h1 { font-size: 32px;}
 	header p { font-size: 16px;}
@@ -135,5 +178,8 @@ footer {
 	.action {width: 100%;padding: 8px 16px 8px 16px;}
 	.settings i {font-size: 32px;}
 	.action h2 {font-size: 20px;}
+
+	/* DandDB Admin */
+	.admin {width: 100%;float: none;}
 }
 

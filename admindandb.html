@@ -4,7 +4,6 @@
   <title>Dan Data Base Admin</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href=
   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
@@ -12,123 +11,80 @@
   "https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
-<body class="w3-black w3-text-light-grey">
+<body>
   <!-- Page Content -->
-  <div class="w3-padding-large" id="dbmain">
+  <div id="adminmain">
     <!-- Header/Home -->
-    <header class="w3-container w3-padding-large w3-center w3-black" id=
-    "dbhome">
-      <h1 class="w3-xxlarge w3-wide">DanDB Admin</h1>
+    <header>
+      <h1>DanDB Admin</h1>
     </header><!-- Database Section -->
-    <div class="w3-third w3-block w3-padding-large" id="dbmodify">
+    <div class="admin" id="dbmodify">
       <h2>Modify</h2>
-      <form action="/php/modify-person.php" method="post" target=
-      "modifyresults">
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="Username" name="username" required=""></p>
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
-        "password" placeholder="Password" name="password" required=""></p>
-        <p style="padding-bottom: 24px"><input class=
-        "w3-input w3-padding-8 w3-text-dark-grey" type="text" placeholder="id"
-        name="id" required=""></p>
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="firstName" name="firstName"></p>
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="middleName" name="middleName"></p>
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="lastName" name="lastName"></p>
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="dateOfBirth (format YYYY-MM-DD)" name="dateOfBirth"></p>
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="dateOfDeath (format YYYY-MM-DD)" name="dateOfDeath"></p>
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="placeOfBirth" name="placeOfBirth"></p>
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="gender (M or F)" name="gender"></p>
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="profession" name="profession"></p>
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="misc (max 255 characters)" name="misc"></p>
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="fatherId" name="fatherId"></p>
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="motherId" name="motherId"></p>
-        <div class="w3-col">
-          <button class="w3-left w3-button w3-light-grey w3-padding-large"
-          type="submit"><i class="material-icons">person_pin</i>
-          MODIFY</button> <iframe title="Modify Notification" style=
-          "height: 54px;" class="w3-rest w3-padding-small w3-border-0" id=
-          "modifyresults" name="modifyresults"></iframe>
+      <form action="/php/modify-person.php" method="post" target="modifyresults">
+        <p><input type="text" placeholder="Username" name="username" required=""></p>
+        <p><input type="password" placeholder="Password" name="password" required=""></p>
+        <p style="padding-bottom:24px;"><input type="text" placeholder="id" name="id" required=""></p>
+        <p><input type="text" placeholder="firstName" name="firstName"></p>
+        <p><input type="text" placeholder="middleName" name="middleName"></p>
+        <p><input type="text" placeholder="lastName" name="lastName"></p>
+        <p><input type="text" placeholder="dateOfBirth (YYYY-MM-DD)" name="dateOfBirth"></p>
+        <p><input type="text" placeholder="dateOfDeath (YYYY-MM-DD)" name="dateOfDeath"></p>
+        <p><input type="text" placeholder="placeOfBirth" name="placeOfBirth"></p>
+        <p><input type="text" placeholder="gender (M or F)" name="gender"></p>
+        <p><input type="text" placeholder="profession" name="profession"></p>
+        <p><input type="text" placeholder="misc (255 characters)" name="misc"></p>
+        <p><input type="text" placeholder="fatherId" name="fatherId"></p>
+        <p><input type="text" placeholder="motherId" name="motherId"></p>
+        <div>
+          <button type="submit"><i class="material-icons">person_pin</i> MODIFY</button>
+          <iframe title="Modify Notification" id="modifyresults" name="modifyresults"></iframe>
         </div>
       </form>
     </div>
-    <div class="w3-third w3-block w3-padding-large" id="dbadd">
+    <div class="admin" id="dbadd">
       <h2>Add</h2>
       <form action="/php/add-person.php" method="post" target="addresults">
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="Username" name="username" required=""></p>
-        <p style="padding-bottom: 78px"><input class=
-        "w3-input w3-padding-8 w3-text-dark-grey" type="password" placeholder=
-        "Password" name="password" required=""></p>
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="firstName" name="firstName"></p>
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="middleName" name="middleName"></p>
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="lastName" name="lastName"></p>
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="dateOfBirth (format YYYY-MM-DD)" name="dateOfBirth"></p>
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="dateOfDeath (format YYYY-MM-DD)" name="dateOfDeath"></p>
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="placeOfBirth" name="placeOfBirth"></p>
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="gender (M or F)" name="gender" required=""></p>
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="profession" name="profession"></p>
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="misc (max 255 characters)" name="misc"></p>
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="fatherId" name="fatherId"></p>
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="motherId" name="motherId"></p>
-        <div class="w3-col">
-          <button class="w3-left w3-button w3-light-grey w3-padding-large"
-          type="submit"><i class="material-icons">person_add</i> ADD</button>
-          <iframe title="Add Notification" style="height: 54px;" class=
-          "w3-rest w3-padding-small w3-border-0" id="addresults" name=
-          "addresults"></iframe>
+        <p><input type="text" placeholder="Username" name="username" required=""></p>
+        <p style="padding-bottom:80px;"><input type="password" placeholder="Password" name="password" required=""></p>
+        <p><input type="text" placeholder="firstName" name="firstName"></p>
+        <p><input type="text" placeholder="middleName" name="middleName"></p>
+        <p><input type="text" placeholder="lastName" name="lastName"></p>
+        <p><input type="text" placeholder="dateOfBirth (YYYY-MM-DD)" name="dateOfBirth"></p>
+        <p><input type="text" placeholder="dateOfDeath (YYYY-MM-DD)" name="dateOfDeath"></p>
+        <p><input type="text" placeholder="placeOfBirth" name="placeOfBirth"></p>
+        <p><input type="text" placeholder="gender (M or F)" name="gender" required=""></p>
+        <p><input type="text" placeholder="profession" name="profession"></p>
+        <p><input type="text" placeholder="misc (255 characters)" name="misc"></p>
+        <p><input type="text" placeholder="fatherId" name="fatherId"></p>
+        <p><input type="text" placeholder="motherId" name="motherId"></p>
+        <div>
+          <button type="submit"><i class="material-icons">person_add</i> ADD</button>
+          <iframe title="Add Notification" id="addresults" name="addresults"></iframe>
         </div>
       </form>
     </div>
-    <div class="w3-third w3-block w3-padding-large" id="dbremove">
+    <div class="admin" id="dbremove">
       <h2>Remove</h2>
-      <form action="/php/remove-person.php" method="post" target=
-      "removeresults">
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type="text"
-        placeholder="Username" name="username" required=""></p>
-        <p><input class="w3-input w3-padding-8 w3-text-dark-grey" type=
-        "password" placeholder="Password" name="password" required=""></p><br>
-        <p><input class="w3-input w3-padding-16 w3-text-dark-grey" type="text"
-        placeholder="Removal String" name="remove" required=""></p>
-        <div class="w3-col">
-          <button class="w3-left w3-button w3-light-grey w3-padding-large"
-          type="submit"><i class="material-icons">remove_circle_outline</i>
-          REMOVE</button> <iframe title="Remove Notification" style=
-          "height: 54px;" class="w3-rest w3-padding-small w3-border-0" id=
-          "removeresults" name="removeresults"></iframe>
+      <form action="/php/remove-person.php" method="post" target="removeresults">
+        <p><input type="text" placeholder="Username" name="username" required=""></p>
+        <p style="padding-bottom:80px;"><input type="password" placeholder="Password" name="password" required=""></p>
+        <p><input type="text" placeholder="Removal String" name="remove" required=""></p>
+        <div>
+          <button type="submit"><i class="material-icons">remove_circle_outline</i> REMOVE</button>
+          <iframe title="Remove Notification" id="removeresults" name="removeresults"></iframe>
         </div>
       </form>
     </div>
   </div><!-- End Database Section -->
-  <!-- Footer -->
-  <footer class="w3-row-padding w3-padding-64 w3-text-grey w3-center">
+<!--
+<footer class="w3-row-padding w3-padding-64 w3-text-grey w3-center">
     <p class="w3-medium">Credit where credit is due, powered by <a href=
     "https://www.mysql.com" target="_blank" class=
     "w3-hover-text-white extlink">MySQL</a>, <a href="https://www.php.net"
     target="_blank" class="w3-hover-text-white extlink">PHP</a> and <a href=
     "https://www.w3schools.com/w3css/default.asp" target="_blank" class=
-    "w3-hover-text-white extlink">w3.css</a></p><!-- End footer -->
+    "w3-hover-text-white extlink">w3.css</a></p>
   </footer>
+<-->
 </body>
 </html>
