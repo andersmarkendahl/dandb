@@ -15,6 +15,15 @@ footer {
 	padding-top: 64px;
 	padding-bottom: 16px
 }
+input {
+	padding: 8px 2px 8px 2px;
+	width: 95%;
+	font-size: 16px;
+	color: #404040;
+}
+::placeholder {color: #404040;opacity: 1;}
+:-ms-input-placeholder {color: #404040;}
+::-ms-input-placeholder {color: #404040;}
 
 /* Index */
 
@@ -106,10 +115,6 @@ footer {
 .action h2 {
 	font-size: 28px;
 }
-.action input {
-	padding: 8px 16px 8px 16px;
-	width: 100%;
-}
 .action button {
 	padding: 8px 16px 8px 16px;
 	color: #404040;
@@ -139,14 +144,6 @@ footer {
 .admin h2 {
 	font-size: 28px;
 }
-.admin input {
-	padding: 8px 2px 8px 2px;
-	width: 95%;
-	font-size: 16px;
-}
-.admin ::placeholder {color: #404040;opacity: 1;}
-.admin :-ms-input-placeholder {color: #404040;}
-.admin ::-ms-input-placeholder {color: #404040;}
 .admin button {
 	padding: 8px 16px 8px 16px;
 	color: #404040;
@@ -164,8 +161,8 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
-	header h1 { font-size: 32px;}
-	header p { font-size: 16px;}
+	header h1 {font-size: 32px;}
+	header p {font-size: 16px;}
 	footer {font-size: 8px;}
 
 	/* Index */
