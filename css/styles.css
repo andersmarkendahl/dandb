@@ -28,6 +28,19 @@ input {
 	font-size: 16px;
 	color: #404040;
 }
+
+button {
+	-webkit-appearance: none;
+	height: 46px;
+	padding: 8px 16px 8px 16px;
+	color: #404040;
+	transition-duration: 0.4s;
+	background-color: #f5f5f5;
+}
+button:hover {
+	color: #1a1a1a;
+	background-color: #cccccc;
+}
 ::placeholder {color: #404040;opacity: 1;}
 :-ms-input-placeholder {color: #404040;}
 ::-ms-input-placeholder {color: #404040;}
@@ -116,15 +129,6 @@ input {
 	width: 50%;
 	padding: 8px 32px 8px 32px;
 }
-.action button {
-	padding: 8px 16px 8px 16px;
-	color: #404040;
-	transition-duration: 0.4s;
-}
-.action button:hover {
-	color: #1a1a1a;
-	background-color: #cccccc;
-}
 
 /* DandDB Admin */
 
@@ -142,16 +146,7 @@ input {
 	padding-bottom: 12px;
 }
 .admin button {
-	-webkit-appearance: none;
-	height: 46px;
-	padding: 8px 16px 8px 16px;
-	color: #404040;
-	transition-duration: 0.4s;
 	float: left;
-}
-.admin button:hover {
-	color: #1a1a1a;
-	background-color: #cccccc;
 }
 .admin iframe {
 	height: 46px;
