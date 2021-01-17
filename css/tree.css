@@ -9,6 +9,7 @@ h1 {
 
 .tree {
 	padding-left: 0px;
+	padding-bottom: 64px;
 	color: black;
 	font-family: "Ubuntu", sans-serif;
 }
