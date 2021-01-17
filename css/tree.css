@@ -65,6 +65,7 @@ h1 {
 }
 
 .icon {
+	-webkit-appearance: none;
 	font-size: 26px;
 	float: right;
 }
