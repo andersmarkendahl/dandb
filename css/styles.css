@@ -101,6 +101,7 @@ button:hover {
 	color: #f5f5f5;
 }
 .settings p {
+	font-size: 14px;
 	padding-right: 1px;
 }
 .settings:hover .dropdown {
