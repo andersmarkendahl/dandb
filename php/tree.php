@@ -6,6 +6,18 @@ echo "<meta charset=\"UTF-8\">";
 echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/tree.css\">\n";
 echo "</head>\n";
 echo "<body>\n";
+echo "<div class=\"tree demo\">"
+echo "<p><u>Example</u></p>"
+echo "<ul>"
+echo "<li><div class=\"leaf\">Child<br>Name</div>"
+echo "<ul>"
+echo "<li><div class=\"leaf\">Father<br>Name</div></li>"
+echo "<li><div class=\"leaf\">Mother<br>Name</div></li>"
+echo "</ul>"
+echo "</li>"
+echo "</ul>"
+echo "<p>Hover a person to see information</p>"
+echo "</div>"
 echo "<h1>Genealogy Tree</h1>\n";
 echo "<div class=\"tree\">\n";
 
