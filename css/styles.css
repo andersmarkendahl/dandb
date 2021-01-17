@@ -12,6 +12,10 @@ header h1 {
 	font-size: 64px;
 	font-weight: normal;
 }
+h2 {
+	font-size: 28px;
+	font-weight: normal;
+}
 header p {font-size: 32px;}
 footer {
 	text-align: center;
@@ -112,9 +116,6 @@ input {
 	width: 50%;
 	padding: 8px 32px 8px 32px;
 }
-.action h2 {
-	font-size: 28px;
-}
 .action button {
 	padding: 8px 16px 8px 16px;
 	color: #404040;
@@ -140,9 +141,6 @@ input {
 	float: left;
 	padding-bottom: 12px;
 }
-.admin h2 {
-	font-size: 28px;
-}
 .admin button {
 	padding: 8px 16px 8px 16px;
 	color: #404040;
@@ -163,6 +161,7 @@ input {
 	header h1 {font-size: 32px;}
 	header p {font-size: 16px;}
 	footer {font-size: 8px;}
+	h2 {font-size: 20px;}
 
 	/* Index */
 	#main {width: 90%;}
@@ -173,7 +172,6 @@ input {
 	#dbtree {float: none;}
 	.action {width: 100%;padding: 8px 16px 8px 16px;}
 	.settings i {font-size: 32px;}
-	.action h2 {font-size: 20px;}
 
 	/* DandDB Admin */
 	.admin {width: 100%;float: none;}
