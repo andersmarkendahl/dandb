@@ -169,6 +169,8 @@ button:hover {
 
 	/* Index */
 	#main {width: 90%;}
+	.service a {width: 100%;}
+	.service table {width: 100%;}
 
 	/* DanDB */
 	#dbmain {padding: 8px 4px 8px 4px;font-size:14px;}
