@@ -22,6 +22,7 @@ footer {
 	padding-top: 64px;
 	padding-bottom: 16px
 }
+
 input {
 	padding: 8px 0px 8px 4px;
 	width: 95%;
@@ -83,6 +84,11 @@ button:hover {
 }
 .service .a p {
 	float: right;
+}
+.service table {
+	padding: 12px 0px 0px 12px;
+	width: 60%;
+	margin-right: auto;
 }
 
 .service span {
